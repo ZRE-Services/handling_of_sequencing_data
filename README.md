@@ -1,8 +1,6 @@
-# handling_of_sequencing_data
+# Handling of Sequencing Data
 
-# Data Processing and Data Upload
-
-## 1. Overview of ZRE shotgun data pipeline
+## 1. Overview of ZRE Sequencing Data Pipeline
 
 1. Samples are sequenced on Novaseq-X and automatically copied to the local storage connected to our Ubuntu-server "hilde" in the form of `.fastq.gz`-files.
 2. Data is then renamed, concatenated and sorted. Metadata-files are generated.
@@ -16,45 +14,45 @@
 ```mermaid
 flowchart LR
     subgraph Lab["Lab"]
-        style Lab fill:#f9d6ff,stroke:#333,stroke-width:1px
+        style Lab fill:#d0e0ff,stroke:#333,stroke-width:1px
         Sequencer["Sequencer"]
-        style Sequencer fill:#f5f5f5,stroke:#666,color:#333
+        style Sequencer fill:#f8f8f8,stroke:#666,color:#333
     end
     
     subgraph LocalServer["Local Server"]
-        style LocalServer fill:#d4f4ff,stroke:#333,stroke-width:1px
-        FastqFiles[".fastq-files\n2 fastq files/sample\n~1 GB/file"]
-        Process["Data-processing:\n- rename\n- sort\n- concatenate\n- ..."]
-        style FastqFiles fill:#f5f5f5,stroke:#666,color:#333
-        style Process fill:#f5f5f5,stroke:#666,color:#333
+        style LocalServer fill:#c2f0c2,stroke:#333,stroke-width:1px
+        FastqFiles[".fastq-files (2 files/sample, ~1 GB/file)"]
+        Process["Data-processing: rename, sort, concatenate, ..."]
+        style FastqFiles fill:#f8f8f8,stroke:#666,color:#333
+        style Process fill:#f8f8f8,stroke:#666,color:#333
     end
     
     subgraph AWSCloud["AWS Cloud"]
-        style AWSCloud fill:#fff2cc,stroke:#333,stroke-width:1px
-        RenamedFiles["renamed\n.fastq-files"]
-        MetadataFiles["metadata-\nfiles"]
-        style RenamedFiles fill:#f5f5f5,stroke:#666,color:#333
-        style MetadataFiles fill:#f5f5f5,stroke:#666,color:#333
+        style AWSCloud fill:#ffe0b3,stroke:#333,stroke-width:1px
+        RenamedFiles["renamed .fastq-files"]
+        MetadataFiles["metadata-files"]
+        style RenamedFiles fill:#f8f8f8,stroke:#666,color:#333
+        style MetadataFiles fill:#f8f8f8,stroke:#666,color:#333
     end
     
     subgraph Customers["Customers"]
-        style Customers fill:#d5e8d4,stroke:#333,stroke-width:1px
+        style Customers fill:#e6ccff,stroke:#333,stroke-width:1px
         Customer1["customer1"]
         Customer2["customer2"]
-        style Customer1 fill:#f5f5f5,stroke:#666,color:#333
-        style Customer2 fill:#f5f5f5,stroke:#666,color:#333
+        style Customer1 fill:#f8f8f8,stroke:#666,color:#333
+        style Customer2 fill:#f8f8f8,stroke:#666,color:#333
     end
     
     subgraph Partners["Partners"]
-        style Partners fill:#dae8fc,stroke:#333,stroke-width:1px
+        style Partners fill:#ffcccc,stroke:#333,stroke-width:1px
         ZRC["ZRC"]
-        ZRCBioinformatics["ZRC-\nBioinformatics"]
-        style ZRC fill:#f5f5f5,stroke:#666,color:#333
-        style ZRCBioinformatics fill:#f5f5f5,stroke:#666,color:#333
+        ZRCBioinformatics["ZRC-Bioinformatics"]
+        style ZRC fill:#f8f8f8,stroke:#666,color:#333
+        style ZRCBioinformatics fill:#f8f8f8,stroke:#666,color:#333
     end
     
     BIReports["BI-reports"]
-    style BIReports fill:#ffe6cc,stroke:#666,color:#333
+    style BIReports fill:#d9f2e6,stroke:#666,color:#333
     
     Sequencer -->|copy| FastqFiles
     FastqFiles --> Process
@@ -73,7 +71,7 @@ flowchart LR
     BIReports -->|access| Customer2
 ```
 
-_Figure 1: Overview of ZRE shotgun data pipeline as of 24.02.28_
+_Figure 1: Overview of ZRE Sequencing Data Pipeline as of 24.02.28_
 
 ## 2. How to set up a new user on local server zymo-hilde01
 

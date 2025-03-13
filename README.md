@@ -10,20 +10,13 @@
 6. ZRE runs bioinformatics analysis on projects that require it.
 7. ZRE gives customers access to BI-reports.
 
-### Workflow Diagram
 ![zre_data_handling_workflow](pictures/zre_data_handling_workflow.png)
-
-Figure 1: Overview of ZRE Sequencing Data Workflow as of 24.02.28_
-
+Figure 1: Overview of ZRE Sequencing Data Workflow
 
 ## 2. Processing a sequencing data batch
 
 1. Within the directory `\\zymo-filelab01\NovaSeq01\Output\sequencing_data_for_upload\` create a new folder.
-
 2. From the directory `\\zymo-filelab01\NovaSeq01\Output\test\wir_automatisieren_den_upload_prozess\shotgun_pipeline_git` copy all files to the new folder you just created (code for data processing and upload is also hosted on Github).
-
 3. Rename the files "YYMMDD_Instructions_&_Checklist.xlsm" and "YYMMDD_Upload_Data_Info.xlsm" according to the date of the sequencing run.
-
 4. Login with the user "upload" on zymo-hilde01 with Remote Desktop control (password required).
-
 5. Follow the instructions within "YYMMDD_Instructions_&_Checklist.xlsm" closely and document each step you completed within this same file.

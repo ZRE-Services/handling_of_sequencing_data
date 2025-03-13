@@ -43,7 +43,7 @@ After installing the AWS CLI, you need to configure it with your AWS credentials
 3. Select your user (e.g., "tweckerle_admin")
 4. Click on the tab "Security credentials"
 
-![How to access your AWS-credentials](https://placeholder-for-figure-2.png)
+![How to access your AWS-credentials](pictures/security_credentials_s3_console.png)
 
 3. After configuring the AWS CLI, you can use commands like `aws s3 ls` to interact with your AWS resources from the terminal.
 

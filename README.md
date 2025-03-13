@@ -16,6 +16,7 @@
 9. ZRE gives customers access to BI-reports.
 
 ![zre_data_handling_workflow](pictures/zre_data_handling_workflow.png)
+
 Figure 1: Overview of ZRE Sequencing Data Workflow
 
 ## 2. Processing a sequencing data batch

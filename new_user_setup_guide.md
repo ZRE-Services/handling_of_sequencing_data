@@ -6,7 +6,7 @@
 Ask your IT-Admin to create a new user on `zymo-hilde01`.
 
 ### 2. Login
-Login via Remote Desktop Connection.
+Login via Remote Desktop Connection using this german [guide](Anleitung_Login_Hilde.pdf)
 
 ### 3. Install AWS CLI
 
